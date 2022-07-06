@@ -33,7 +33,7 @@ cat <<EOF > mnemonic.txt
 $mnemonic
 EOF
 mv mnemonic.txt $HOME/kysor/secrets
-sudo mv /home/ubuntu/arweave.json $HOME/kysor/secrets
+sudo mv arweave.json $HOME/kysor/secrets
 sudo mv restart.sh $HOME/kysor
 sed -i.bak -e "s/initialStake: 100/initialStake: $amount/; s/poolId: 0/poolId: $pooid/" $HOME/kysor/kysor.conf.ts
 cd kysor
